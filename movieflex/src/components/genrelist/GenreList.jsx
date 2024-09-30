@@ -10,7 +10,7 @@ const GenreList = ({ genres, onSelect }) => {
       return newSelected;
     });
   };
-  // console.log(handleSelesct());
+
   return (
     <div className="header">
       <div className="logo">

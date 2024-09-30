@@ -1,6 +1,35 @@
 .movielist {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding: 20px;
+}
+
+.year-section h2 {
+  width: 100%; /* Take full width */
+  text-align: center; /* Center the text */
+  background-color: #f4f4f4; /* Background color for heading */
+  padding: 10px 0; /* Some padding */
+  margin-bottom: 20px; /* Space between heading and movies */
+  font-size: 24px; /* Font size */
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  gap: 20px; /* Space between cards */
+}
+
+.load-more-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.load-more-button:hover {
+  background-color: #0056b3;
 }
