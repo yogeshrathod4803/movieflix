@@ -1,0 +1,23 @@
+.movie-card {
+  background: #333;
+  color: white;
+  margin: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 200px;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-card h3 {
+  font-size: 18px;
+  margin: 10px;
+}
+
+.movie-card p {
+  margin: 10px;
+  font-size: 14px;
+}

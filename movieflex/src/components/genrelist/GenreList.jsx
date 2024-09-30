@@ -1,20 +1,31 @@
 import React from "react";
-import "../genrelist/GenreList.css";
+import "./GenreList.css";
 
-const GenreList = () => {
+const GenreList = ({ genres, onSelect }) => {
+  const handleSelect = (genreId) => {
+    onSelect((prev) => {
+      const newSelected = prev.includes(genreId)
+        ? prev.filter((id) => id !== genreId)
+        : [...prev, genreId];
+      return newSelected;
+    });
+  };
+  // console.log(handleSelesct());
   return (
     <div className="header">
       <div className="logo">
         <h2>MOVIEFIX</h2>
       </div>
       <div className="genre">
-        <button className="genre-btn">ALL</button>
-        <button className="genre-btn">Action</button>
-        <button className="genre-btn">Comedy</button>
-        <button className="genre-btn">Horror</button>
-        <button className="genre-btn">Drama</button>
-        <button className="genre-btn">Sci-Fic</button>
-        <button className="genre-btn">family</button>
+        {genres.map((genre) => (
+          <button
+            key={genre.id}
+            className="genre-btn"
+            onClick={() => handleSelect(genre.id)}
+          >
+            {genre.name}
+          </button>
+        ))}
       </div>
     </div>
   );
